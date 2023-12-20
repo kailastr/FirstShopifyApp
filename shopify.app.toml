@@ -1,0 +1,27 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+name = "first-app"
+client_id = "91d01837575738c452ddadae64f8ac00"
+application_url = "https://brooklyn-acer-coleman-sciences.trycloudflare.com"
+embedded = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_products"
+
+[auth]
+redirect_urls = [
+  "https://brooklyn-acer-coleman-sciences.trycloudflare.com/auth/callback",
+  "https://brooklyn-acer-coleman-sciences.trycloudflare.com/auth/shopify/callback",
+  "https://brooklyn-acer-coleman-sciences.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2023-10"
+
+[pos]
+embedded = false
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "kailas-testing.myshopify.com"
