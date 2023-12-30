@@ -11,25 +11,30 @@ import {
 import { TitleBar } from "@shopify/app-bridge-react";
 import { useTranslation, Trans } from "react-i18next";
 
+// import { PaymentCardSection } from '../components/PaymentCardComponent';
+
 import { trophyImage } from "../assets";
 
 import { ProductsCard } from "../components";
+import PaymentCardSection from "../components/PaymentCardComponent";
 
 export default function HomePage() {
   const { t } = useTranslation();
   return (
     <Page narrowWidth>
-      <TitleBar title={t("HomePage.title")} primaryAction={null} />
+      <TitleBar title={t("First Shopify App")} primaryAction={null} />
       <Layout>
+
+        {/* Un-used card */}
         <Layout.Section>
-          <Card sectioned>
+          {/* <Card sectioned>
             <Stack
               wrap={false}
               spacing="extraTight"
               distribution="trailing"
               alignment="center"
             >
-              <Stack.Item fill>
+            <Stack.Item fill>
                 <TextContainer spacing="loose">
                   <Text as="h2" variant="headingMd">
                     {t("HomePage.heading")}
@@ -72,7 +77,7 @@ export default function HomePage() {
                   </p>
                 </TextContainer>
               </Stack.Item>
-              <Stack.Item>
+            <Stack.Item>
                 <div style={{ padding: "0 20px" }}>
                   <Image
                     source={trophyImage}
@@ -82,8 +87,18 @@ export default function HomePage() {
                 </div>
               </Stack.Item>
             </Stack>
+
+          </Card> */}
+
+        </Layout.Section>
+
+
+        <Layout.Section>
+          <Card sectioned>
+            <PaymentCardSection />
           </Card>
         </Layout.Section>
+
         <Layout.Section>
           <ProductsCard />
         </Layout.Section>
